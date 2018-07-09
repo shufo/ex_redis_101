@@ -27,7 +27,7 @@ jobs:
           keys:
             - "{{ .Environment.CACHE_VERSION }}-build-cache-{{ .Branch }}"
             - "{{ .Environment.CACHE_VERSION }}-build-cache"
-
+      - run: mix local.hex --force
       - run: mix deps.get
 
       - save_cache:
