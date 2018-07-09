@@ -80,9 +80,6 @@ workflows:
       - build_dependencies:
            requires:
              - checkout_code
-      - compile_assets:
-           requires:
-             - build_dependencies
       - test:
            requires:
              - build_dependencies
