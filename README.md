@@ -24,7 +24,6 @@ $ docker run -d -p 6379:6379 --name redis redis:alpine
 
 - Write the modules to pass the tests
 
-
 ```
 $ mix test
 ```
@@ -34,3 +33,11 @@ $ mix test
 - Test results is shown in here
 
 https://circleci.com/gh/shufo/ex_redis_101
+
+## Contribution
+
+- Run formatter before commit to Git
+
+```
+$ mix format
+```
