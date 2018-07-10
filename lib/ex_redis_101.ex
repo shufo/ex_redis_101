@@ -25,6 +25,7 @@ defmodule ExRedis101 do
   end
 end
 
+#--User Module--
 defmodule ExRedis101.User do
   def get_username_by_user_id(conn, id) do
     to_string(Redix.command!(conn, ["HVALS", "user:#{id}"]))
@@ -50,6 +51,6 @@ end
 defmodule ExRedis101.AddWorker do
   def perform(result_key, first, second) do
     {:ok, conn} = Redix.start_link()
-    Redix.command(conn, ["SET", result_key, first + second])
+    Redix.command!(conn, ["SET", result_key, first + second])
   end
 end
